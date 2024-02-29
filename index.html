@@ -1,0 +1,123 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Vis & Society Assignment 3</title>
+	<link rel="stylesheet" href="https://vis-society.github.io/assignments/report.css" />
+</head>
+
+<body>
+	<header>
+		<h1>
+			<small>Assignment 3</small>
+			Visualization Design
+		</h1>
+
+		<p>
+			<strong>Emma Tysinger</strong> — <em>tysinger@mit.edu</em>
+		</p>
+	</header>
+
+	<main>
+		<section>
+			<h2>Phase One: Sketching Visualizations</h2>
+
+            <figure>
+				<img src="img/fig1.jpg" alt="" width="100%"/>
+				<figcaption>
+          This is a bubble chart where age groups are along the x-axis and year along the y-axis. The size of the bubble represents the percent of total population for respective year, the population in each age group is. So a large bubble, say 20%, would be interpretted as 20% of all people in 1900 were between the ages of 25-30. In addition to the size of the bubble, each bubble would be it's own pie chart representing the breakdown of male to female within that age group and year.
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Rationale for Sketch 1:
+			</p>
+
+			<ul>
+				<li>My motivation to look at how age composition differs between 1900 and 2000. </li>
+				<li>What I think this type of chart does well, is it uses a diverse amount of markings (color, size, pie graphs, bubbles) to represent the data such that all the information given by the dataset is present.</li>
+				<li>What doesn't work well, is it isn't clear how to interpret the pie charts to make conclusions about gender breakdown across age bins because comparing pie charts (~90 pie charts) is not intuitive. This could be improved by using two seperate plots for each gender.</li>
+			</ul>
+
+      <figure>
+				<img src="img/fig2.jpg" alt="" width="100%"/>
+				<figcaption>
+					This is a multi-year bar chart, one bar chart per gender.  
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Rationale for Sketch 2:
+			</p>
+            What was your motivation behind generating this sketch? 
+            What were you hoping it would communicate? 
+            What worked well and what didn’t? 
+            What would you like to explore in the next sketch?
+			<ul>
+				<li>My motivation is to see how within each gender, the population across age groups differs between the two centuries.</li>
+				<li>My goal is to show how the population distribution across age groups is different in 1900 compared to 2000.</li>
+				<li>What doesn't work well is that is difficult to make comparisons across gender at the same time because they are one seperate plots. In the next sketch I hope to resolve this problem.</li>
+			</ul>
+
+      <figure>
+				<img src="img/fig3.jpg" alt="" width="100%"/>
+				<figcaption>
+                    This is a form of a population pyramid where there is 1 plot for each year. There is a shared y-axis for age bins and then diverging x-axes for the female and male populations. Ideally (not shown in the sketch) female would be red and make would be blue for meaningful coloring of the data. 
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Rationale for Sketch 3:
+			</p>
+
+			<ul>
+				<li>RATIONALE_1</li>
+				<li>My goal is to show how the population distribution across age groups is different in 1900 compared to 2000</li>
+				<li>What worked well is that now there are no overlaping bars so it's easier to tell the trend of the four main comparisons (F1900, M1900, F2000, M2000)</li>
+			</ul>
+
+      
+
+      <h3>Reflection</h3>
+
+      <p>
+        WRITE REFLECTION ON ALL 3 SKETCHES HERE.
+      </p>
+
+		</section>
+
+		<section>
+			<h2>Phase Two: Final Design</h2>
+
+			<figure>
+				<img src="img/pop_area_noline.png" alt="" width="100%"/>
+				<figcaption>
+				This figure depicts the distribution of populations across age groups seperated by gender and year. The x-axis represents the percent of total population (where total population refers to total population of each combination of gender and year – F1900, F2020, M1900, M2020). 
+                We can see that the 1900 population distribution for both male and female has a wider base and a skinnier top, indicating a younger population overall and not many retirees. The population distribution of 2000, on the otherhand, is more uniform across age groups, with a bulge around 40.
+                Indeed, after computing the weighted average age, the average age in 1900 was 23.9 and the average age in 2000 was 33.8, almost 10 years older. 
+				</figcaption>
+			</figure>
+		</section>
+
+		<section>
+			<h2>Design Process & Design Decisions</h2>
+
+			<p>
+        I first created my initial vision of a population pyramid in Tableau using horizontal bars charts and two seperate plots for each year. While there were clear visual differences in the shapes created by the differing population distributions, it would be more convincing if I could plot this all on one plot. 
+        Therefore I created the same plot but with shared gender axes for the two years. Additionally, I changed from a bar chart to area chart with decreased color opacity so the visualization was less overwhelming and it was easier to see how the population distributions differed.
+        Finally, I went through multiple iterations about the axis. Either a dual, un-synchronized axis (because the populations in 2000 is alot larger than in 1900), or a dual, synchronized axis. The latter "squished" the population distribution of 1900, so the shape difference wasn't as obvious. 
+        I settled on using a percent of total population with synchronized axis, in a way to normalize the values. This made the most sense because I care more about the shape and how to population is distributed across age bins rather than looking at the actual magnitude of populations between the two centuries.
+        As a bonus, I added a reference band indicating the working ages in the United States because it could be interesting to use a similar plot in an analysis about the aging population crisis in the United States.
+      </p>
+
+
+      <h3>Reflection</h3>
+
+      <p>
+        For myself phase 1 was useful as it helped me decide on a type of visualization I ended up using for my final visualization. However, I played around and changed alot of the visual markings and encodings such as color, line vs. bar plot, multiple facets vs. overlapping, in Tableau itself to see which combination best 
+        aligned with my question. I don't believe I could've effectively worked through all these decisions simply by sketching the different iterations. 
+        The phase 1/phase 2 would be very effective (for my working style) for more dashboard-esque visualizations where I have many sub figures and determining the most effective layout is important. 
+      </p>
+		</section>
+	</main>
+</body>
+</html>
